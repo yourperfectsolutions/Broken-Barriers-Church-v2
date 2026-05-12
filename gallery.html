@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Broken Barriers Church</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-new.css">
+    <link rel="stylesheet" href="gallery.css">
+    <svg style="display: none;">
+        <symbol id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></symbol>
+        <symbol id="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></symbol>
+        <symbol id="chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></symbol>
+    </svg>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-section"><div class="logo-icon"><img src="logo.png" alt="Broken Barriers Church"></div><div class="logo-text"><h1>BROKEN BARRIERS</h1><p>CHURCH</p></div></div>
+            <div class="desktop-nav">
+                <div class="nav-item"><a href="index.html" class="nav-button">Home</a></div>
+                <div class="nav-item"><button class="nav-button">About<svg width="16" height="16"><use href="#chevron-down"></use></svg></button><div class="dropdown-menu"><a href="what-we-believe.html" class="dropdown-item">What We Believe</a><a href="leadership.html" class="dropdown-item">Leadership</a><a href="about.html" class="dropdown-item">Our Story</a></div></div>
+                <div class="nav-item"><button class="nav-button">Connect<svg width="16" height="16"><use href="#chevron-down"></use></svg></button><div class="dropdown-menu"><a href="visit-us.html" class="dropdown-item">Visit Us</a><a href="new-here.html" class="dropdown-item">New Here</a><a href="events.html" class="dropdown-item">Events</a><a href="sermons.html" class="dropdown-item">Sermons</a><a href="prayer-connect.html" class="dropdown-item">Prayer</a><a href="contact.html" class="dropdown-item">Contact</a></div></div>
+                <div class="nav-item"><button class="nav-button">Grow<svg width="16" height="16"><use href="#chevron-down"></use></svg></button><div class="dropdown-menu"><a href="ministries.html" class="dropdown-item">Ministries</a><a href="gallery.html" class="dropdown-item">Photo Gallery</a></div></div>
+                <div class="nav-item"><a href="give.html" class="nav-button">Give</a></div>
+            </div>
+            <button class="mobile-menu-button" id="mobile-menu-button"><svg width="28" height="28"><use href="#menu-icon"></use></svg></button>
+        </nav>
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="index.html" class="mobile-nav-item">Home</a>
+            <button class="mobile-nav-item" data-dropdown="mobile-about-dropdown">About<svg width="18" height="18" class="chevron"><use href="#chevron-down"></use></svg></button>
+            <div class="mobile-dropdown" id="mobile-about-dropdown"><a href="what-we-believe.html" class="mobile-dropdown-item">What We Believe</a><a href="leadership.html" class="mobile-dropdown-item">Leadership</a><a href="about.html" class="mobile-dropdown-item">Our Story</a></div>
+            <button class="mobile-nav-item" data-dropdown="mobile-connect-dropdown">Connect<svg width="18" height="18" class="chevron"><use href="#chevron-down"></use></svg></button>
+            <div class="mobile-dropdown" id="mobile-connect-dropdown"><a href="visit-us.html" class="mobile-dropdown-item">Visit Us</a><a href="new-here.html" class="mobile-dropdown-item">New Here</a><a href="events.html" class="mobile-dropdown-item">Events</a><a href="sermons.html" class="mobile-dropdown-item">Sermons</a><a href="prayer-connect.html" class="mobile-dropdown-item">Prayer</a><a href="contact.html" class="mobile-dropdown-item">Contact</a></div>
+            <button class="mobile-nav-item" data-dropdown="mobile-grow-dropdown">Grow<svg width="18" height="18" class="chevron"><use href="#chevron-down"></use></svg></button>
+            <div class="mobile-dropdown" id="mobile-grow-dropdown"><a href="ministries.html" class="mobile-dropdown-item">Ministries</a><a href="gallery.html" class="mobile-dropdown-item">Photo Gallery</a></div>
+            <a href="give.html" class="mobile-nav-item">Give</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-header">
+            <div class="container">
+                <h1 class="page-title fade-in">Photo Gallery</h1>
+                <p class="page-subtitle fade-in">A glimpse into life at Broken Barriers Church</p>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="container">
+                <!-- Filter Tabs -->
+                <div class="filter-tabs fade-in">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="worship">Worship</button>
+                    <button class="filter-tab" data-filter="word">The Word</button>
+                    <button class="filter-tab" data-filter="prayer">Prayer</button>
+                    <button class="filter-tab" data-filter="cross">The Cross</button>
+                    <button class="filter-tab" data-filter="fellowship">Fellowship</button>
+                    <button class="filter-tab" data-filter="church">Church</button>
+                </div>
+
+                <!-- Photo Grid -->
+                <div class="gallery-grid" id="gallery-grid">
+                    <div class="gallery-photo featured" data-category="worship"><img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=800&h=600&fit=crop&q=80" alt="Worship"><div class="photo-overlay"><p>Sunday Morning Worship</p></div></div>
+                    <div class="gallery-photo" data-category="worship"><img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=600&fit=crop&q=80" alt="Worship"><div class="photo-overlay"><p>Praise & Worship</p></div></div>
+                    <div class="gallery-photo" data-category="word"><img src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?w=600&h=600&fit=crop&q=80" alt="Bible"><div class="photo-overlay"><p>Studying Scripture</p></div></div>
+                    <div class="gallery-photo" data-category="prayer"><img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=600&h=600&fit=crop&q=80" alt="Prayer"><div class="photo-overlay"><p>Prayer Meeting</p></div></div>
+                    <div class="gallery-photo" data-category="fellowship"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=600&fit=crop&q=80" alt="Fellowship"><div class="photo-overlay"><p>Small Group Fellowship</p></div></div>
+                    <div class="gallery-photo" data-category="church"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=600&fit=crop&q=80" alt="Children"><div class="photo-overlay"><p>Children's Ministry</p></div></div>
+                    <div class="gallery-photo" data-category="cross"><img src="https://images.unsplash.com/photo-1502136969935-8d8eef54d77b?w=600&h=600&fit=crop&q=80" alt="Cross"><div class="photo-overlay"><p>The Cross of Christ</p></div></div>
+                    <div class="gallery-photo" data-category="fellowship"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=600&fit=crop&q=80" alt="Community"><div class="photo-overlay"><p>Community Gathering</p></div></div>
+                    <div class="gallery-photo" data-category="worship"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=600&fit=crop&q=80" alt="Worship"><div class="photo-overlay"><p>Hands Raised in Worship</p></div></div>
+                    <div class="gallery-photo" data-category="word"><img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&h=600&fit=crop&q=80" alt="Bible Study"><div class="photo-overlay"><p>Bible Study Group</p></div></div>
+                    <div class="gallery-photo" data-category="prayer"><img src="https://images.unsplash.com/photo-1528498922217-d8d5e2f3d4cc?w=600&h=600&fit=crop&q=80" alt="Prayer"><div class="photo-overlay"><p>Prayer Circle</p></div></div>
+                    <div class="gallery-photo" data-category="church"><img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=600&h=600&fit=crop&q=80" alt="Church"><div class="photo-overlay"><p>Church Family</p></div></div>
+                </div>
+
+                <!-- Submit Photo CTA -->
+                <div class="submit-cta fade-in">
+                    <h3>Share Your Photos</h3>
+                    <p>Have a photo from a church event or service? We'd love to see it!</p>
+                    <a href="contact.html" class="btn btn-primary">Submit a Photo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section"><h3>Broken Barriers Church</h3><p>Restoring the Kingdom, exactly as He designed it.</p></div>
+                <div class="footer-section"><h4>Quick Links</h4><div class="footer-links"><a href="index.html" class="footer-link">Home</a><a href="about.html" class="footer-link">About</a><a href="gallery.html" class="footer-link">Photo Gallery</a><a href="contact.html" class="footer-link">Connect</a><a href="give.html" class="footer-link">Give</a></div></div>
+                <div class="footer-section"><h4>Contact</h4><p>815 Private Road 4717</p><p>Kempner, TX 76539</p><p style="margin-top: 12px;">contact@brokenbarriers.church</p></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Broken Barriers Church. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
