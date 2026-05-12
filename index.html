@@ -4,30 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Broken Barriers Church - Home</title>
-    <meta name="description" content="Breaking spiritual, emotional, and generational barriers through the power of Jesus Christ.">
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- SVG Icons -->
+    <link rel="stylesheet" href="styles-new.css">
     <svg style="display: none;">
         <symbol id="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></symbol>
         <symbol id="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></symbol>
         <symbol id="chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></symbol>
-        <symbol id="clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></symbol>
-        <symbol id="map-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></symbol>
-        <symbol id="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></symbol>
-        <symbol id="users-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></symbol>
-        <symbol id="book-open-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></symbol>
+        <symbol id="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></symbol>
     </svg>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo-section"><div class="logo-icon"><img src="logo.png" alt="Broken Barriers Church Logo"></div><div class="logo-text"><h1>BROKEN BARRIERS</h1><p>CHURCH</p></div></div>
+            <div class="logo-section"><div class="logo-icon"><img src="logo.png" alt="Broken Barriers Church"></div><div class="logo-text"><h1>BROKEN BARRIERS</h1><p>CHURCH</p></div></div>
             <div class="desktop-nav">
                 <div class="nav-item"><a href="index.html" class="nav-button">Home</a></div>
                 <div class="nav-item"><button class="nav-button">About<svg width="16" height="16"><use href="#chevron-down"></use></svg></button><div class="dropdown-menu"><a href="what-we-believe.html" class="dropdown-item">What We Believe</a><a href="leadership.html" class="dropdown-item">Leadership</a><a href="about.html" class="dropdown-item">Our Story</a></div></div>
                 <div class="nav-item"><button class="nav-button">Connect<svg width="16" height="16"><use href="#chevron-down"></use></svg></button><div class="dropdown-menu"><a href="visit-us.html" class="dropdown-item">Visit Us</a><a href="new-here.html" class="dropdown-item">New Here</a><a href="events.html" class="dropdown-item">Events</a><a href="sermons.html" class="dropdown-item">Sermons</a><a href="prayer-connect.html" class="dropdown-item">Prayer</a><a href="contact.html" class="dropdown-item">Contact</a></div></div>
-                <div class="nav-item"><a href="ministries.html" class="nav-button">Ministries</a></div>
+                <div class="nav-item"><button class="nav-button">Grow<svg width="16" height="16"><use href="#chevron-down"></use></svg></button><div class="dropdown-menu"><a href="ministries.html" class="dropdown-item">Ministries</a><a href="gallery.html" class="dropdown-item">Photo Gallery</a></div></div>
                 <div class="nav-item"><a href="give.html" class="nav-button">Give</a></div>
             </div>
             <button class="mobile-menu-button" id="mobile-menu-button"><svg width="28" height="28"><use href="#menu-icon"></use></svg></button>
@@ -38,110 +32,144 @@
             <div class="mobile-dropdown" id="mobile-about-dropdown"><a href="what-we-believe.html" class="mobile-dropdown-item">What We Believe</a><a href="leadership.html" class="mobile-dropdown-item">Leadership</a><a href="about.html" class="mobile-dropdown-item">Our Story</a></div>
             <button class="mobile-nav-item" data-dropdown="mobile-connect-dropdown">Connect<svg width="18" height="18" class="chevron"><use href="#chevron-down"></use></svg></button>
             <div class="mobile-dropdown" id="mobile-connect-dropdown"><a href="visit-us.html" class="mobile-dropdown-item">Visit Us</a><a href="new-here.html" class="mobile-dropdown-item">New Here</a><a href="events.html" class="mobile-dropdown-item">Events</a><a href="sermons.html" class="mobile-dropdown-item">Sermons</a><a href="prayer-connect.html" class="mobile-dropdown-item">Prayer</a><a href="contact.html" class="mobile-dropdown-item">Contact</a></div>
-            <a href="ministries.html" class="mobile-nav-item">Ministries</a>
+            <button class="mobile-nav-item" data-dropdown="mobile-grow-dropdown">Grow<svg width="18" height="18" class="chevron"><use href="#chevron-down"></use></svg></button>
+            <div class="mobile-dropdown" id="mobile-grow-dropdown"><a href="ministries.html" class="mobile-dropdown-item">Ministries</a><a href="gallery.html" class="mobile-dropdown-item">Photo Gallery</a></div>
             <a href="give.html" class="mobile-nav-item">Give</a>
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="fade-in">Breaking Spiritual, Emotional, and Generational Barriers</h1>
-                <p class="fade-in">Through the power of Jesus Christ</p>
-                <div class="hero-buttons fade-in">
+        <!-- Two-Column Hero -->
+        <section class="hero-two-column">
+            <div class="hero-content-left">
+                <p class="brand-script fade-in">Welcome to</p>
+                <h1 class="hero-headline fade-in">Breaking <span class="gold-accent">Spiritual, Emotional,</span> and Generational Barriers</h1>
+                <p class="hero-lede fade-in">Through the power of Jesus Christ, we tear down every wall standing between people and their Savior.</p>
+                <div class="hero-ctas fade-in">
                     <a href="visit-us.html" class="btn btn-primary">Plan Your Visit</a>
-                    <a href="what-we-believe.html" class="btn btn-secondary">What We Believe</a>
+                    <a href="about.html" class="btn btn-secondary">Our Story</a>
+                </div>
+                <p class="hero-verse fade-in">"For freedom Christ has set us free" <span>— Galatians 5:1</span></p>
+            </div>
+            <div class="hero-image-right slide-in-right">
+                <div class="hero-gradient-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1200&h=900&fit=crop&q=80" alt="Worship">
+            </div>
+        </section>
+
+        <!-- Mission Section Two-Column -->
+        <section class="mission-two-column">
+            <div class="container-wide">
+                <div class="mission-grid">
+                    <div class="mission-image-left slide-in-left">
+                        <div class="gold-border-frame">
+                            <img src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?w=800&h=1000&fit=crop&q=80" alt="Open Bible">
+                        </div>
+                    </div>
+                    <div class="mission-content-right slide-in-right">
+                        <h2>Our Mission</h2>
+                        <p><strong>Sin was the original barrier</strong> — but the sacrifice of Jesus demolished it completely, once and for all. What we refuse to allow is for man-made traditions, institutional pride, and religious complexity to erect new walls in its place, obscuring the very Gospel that sets people free.</p>
+                        <p>At Broken Barriers Church, our mission is to tear down every wall standing between people and Jesus Christ. We are committed to removing the "religious noise" that burdens believers and returning to the Original Design that Jesus established.</p>
+                        <p>We believe the church must be built on Jesus Christ, governed by the Word of God, and empowered by the Holy Spirit — simple, powerful, and transformative.</p>
+                        <a href="what-we-believe.html" class="btn btn-primary">What We Believe</a>
+                        <p class="mission-verse">"Jesus said to him, 'I am the way, and the truth, and the life. No one comes to the Father except through me.'" <span>— John 14:6</span></p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-light">
-            <div class="container">
-                <h2 class="section-title fade-in">Our Mission</h2>
-                <div class="two-column">
-                    <div class="column-content slide-in-left">
-                        <h3>Tearing Down Every Wall</h3>
-                        <p>At Broken Barriers Church, our mission is to tear down every wall standing between people and Jesus Christ.</p>
-                        <p>Sin was the original barrier — but the sacrifice of Jesus demolished it completely, once and for all. What we refuse to allow is for man-made traditions, institutional pride, and religious complexity to erect new walls in its place.</p>
-                        <p><strong>We are committed to restoring the Kingdom, exactly as He designed it.</strong></p>
-                    </div>
-                    <div class="column-image slide-in-right hover-zoom">
-                        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&h=600&fit=crop" alt="Church worship">
-                    </div>
-                </div>
-
-                <div class="two-column" style="margin-top: 60px;">
-                    <div class="column-image slide-in-left hover-zoom">
-                        <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&h=600&fit=crop" alt="Prayer community">
-                    </div>
-                    <div class="column-content slide-in-right">
-                        <h3>Restoring Biblical Faith</h3>
-                        <p>We believe the church must return to its biblical foundation — simple, powerful, and transformative.</p>
-                        <p>This means removing the "religious noise" that obscures the Gospel, rejecting man-made traditions that burden believers, and embracing the Original Design that Jesus established.</p>
-                        <p><strong>Biblical authority, authentic worship, genuine community, and bold mission.</strong></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="parallax-section" style="background-image: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1600&h=800&fit=crop');">
+        <!-- Parallax Quote Break -->
+        <section class="parallax-quote-break" style="background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1600&h=800&fit=crop&q=80');">
             <div class="parallax-overlay"></div>
-            <div class="parallax-content">
-                <h2 class="fade-in">"For freedom Christ has set us free"</h2>
-                <p class="fade-in">Stand firm therefore, and do not submit again to a yoke of slavery.</p>
-                <p class="fade-in" style="font-size: 20px; color: var(--warm-gold); margin-top: 24px;">— Galatians 5:1</p>
+            <div class="parallax-quote-content">
+                <blockquote class="fade-in">
+                    <p>"The Gospel is not complex. Man has made it complex. Our calling is to strip away the layers of tradition and religion, and present Christ — crucified, risen, and returning."</p>
+                    <cite>— Pastor Brian, Broken Barriers Church</cite>
+                </blockquote>
             </div>
         </section>
 
-        <section class="section-gradient">
+        <!-- Latest Teaching Section -->
+        <section class="latest-teaching">
             <div class="container">
-                <h2 class="section-title fade-in">Who We Are</h2>
-                <div class="grid-3">
-                    <div class="trait-card zoom-in hover-lift"><div class="trait-icon"><svg width="40" height="40"><use href="#book-open-icon"></use></svg></div><h3>Biblical</h3><p>Rooted in the authority and truth of God's Word</p></div>
-                    <div class="trait-card zoom-in hover-lift"><div class="trait-icon"><svg width="40" height="40"><use href="#heart-icon"></use></svg></div><h3>Strong</h3><p>Standing firm in faith and conviction</p></div>
-                    <div class="trait-card zoom-in hover-lift"><div class="trait-icon">✨</div><h3>Hopeful</h3><p>Living with eternal perspective and joy</p></div>
-                    <div class="trait-card zoom-in hover-lift"><div class="trait-icon">🙏</div><h3>Reverent</h3><p>Worshiping God with honor and respect</p></div>
-                    <div class="trait-card zoom-in hover-lift"><div class="trait-icon"><svg width="40" height="40"><use href="#users-icon"></use></svg></div><h3>Welcoming</h3><p>Embracing all who seek Christ</p></div>
-                    <div class="trait-card zoom-in hover-lift"><div class="trait-icon">⚡</div><h3>Breakthrough</h3><p>Breaking barriers through the power of Jesus</p></div>
+                <h2 class="section-title fade-in">Latest Teaching</h2>
+                <div class="sermon-grid">
+                    <div class="sermon-card fade-in hover-lift">
+                        <div class="sermon-cover">
+                            <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&h=400&fit=crop&q=80" alt="Sermon">
+                            <div class="date-badge">
+                                <span class="date-month">MAY</span>
+                                <span class="date-day">11</span>
+                            </div>
+                        </div>
+                        <div class="sermon-content">
+                            <h3 class="gold-underline">The Original Barrier</h3>
+                            <p>Understanding how sin separated humanity from God, and how Christ's sacrifice removed that barrier forever. A deep dive into Romans 5 and the doctrine of justification.</p>
+                            <a href="sermons.html" class="listen-link">Listen Now <svg width="16" height="16"><use href="#play-icon"></use></svg></a>
+                            <div class="sermon-meta">
+                                <span>Pastor Brian</span>
+                                <span>45 min</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sermon-card fade-in hover-lift">
+                        <div class="sermon-cover">
+                            <img src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?w=600&h=400&fit=crop&q=80" alt="Sermon">
+                            <div class="date-badge">
+                                <span class="date-month">MAY</span>
+                                <span class="date-day">4</span>
+                            </div>
+                        </div>
+                        <div class="sermon-content">
+                            <h3 class="gold-underline">Man-Made Walls</h3>
+                            <p>Identifying the traditions, rules, and religious systems that obscure the Gospel. Learning to distinguish between biblical commands and human additions.</p>
+                            <a href="sermons.html" class="listen-link">Listen Now <svg width="16" height="16"><use href="#play-icon"></use></svg></a>
+                            <div class="sermon-meta">
+                                <span>Pastor Brian</span>
+                                <span>52 min</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-light">
+        <!-- Life Together Gallery Preview -->
+        <section class="life-together-preview">
             <div class="container">
-                <h2 class="section-title fade-in">Life at Broken Barriers</h2>
-                <p class="text-center fade-in" style="font-size: 18px; max-width: 800px; margin: 0 auto 48px;">We are a community of believers committed to worshiping Jesus, growing in faith, and serving one another.</p>
-                <div class="image-gallery">
-                    <div class="gallery-item fade-in"><img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=600&h=400&fit=crop&q=80" alt="Worship" onerror="this.src='https://via.placeholder.com/600x400/9E1B32/F5E9D2?text=Worship+Together'"><div class="gallery-overlay"><h3 style="margin-bottom: 8px;">Worship Together</h3><p>Every Sunday at 10:00 AM</p></div></div>
-                    <div class="gallery-item fade-in"><img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=600&h=400&fit=crop&q=80" alt="Prayer" onerror="this.src='https://via.placeholder.com/600x400/9E1B32/F5E9D2?text=Pray+Together'"><div class="gallery-overlay"><h3 style="margin-bottom: 8px;">Pray Together</h3><p>Weekly prayer gatherings</p></div></div>
-                    <div class="gallery-item fade-in"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop&q=80" alt="Small groups" onerror="this.src='https://via.placeholder.com/600x400/9E1B32/F5E9D2?text=Grow+Together'"><div class="gallery-overlay"><h3 style="margin-bottom: 8px;">Grow Together</h3><p>Small group Bible studies</p></div></div>
-                    <div class="gallery-item fade-in"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop&q=80" alt="Children" onerror="this.src='https://via.placeholder.com/600x400/9E1B32/F5E9D2?text=Teaching+Children'"><div class="gallery-overlay"><h3 style="margin-bottom: 8px;">Teaching Children</h3><p>Raising the next generation</p></div></div>
-                    <div class="gallery-item fade-in"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop&q=80" alt="Fellowship" onerror="this.src='https://via.placeholder.com/600x400/9E1B32/F5E9D2?text=Fellowship'"><div class="gallery-overlay"><h3 style="margin-bottom: 8px;">Fellowship</h3><p>Building authentic community</p></div></div>
-                    <div class="gallery-item fade-in"><img src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?w=600&h=400&fit=crop&q=80" alt="Bible study" onerror="this.src='https://via.placeholder.com/600x400/9E1B32/F5E9D2?text=Study+Scripture'"><div class="gallery-overlay"><h3 style="margin-bottom: 8px;">Study Scripture</h3><p>Deep in the Word of God</p></div></div>
+                <h2 class="section-title fade-in">Life Together</h2>
+                <p class="section-subtitle fade-in">We are a community of believers committed to worshiping Jesus, growing in faith, and serving one another.</p>
+                
+                <div class="photo-grid-preview">
+                    <div class="photo-tile fade-in hover-zoom-tile"><img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=500&h=400&fit=crop&q=80" alt="Worship"><div class="photo-caption">Worship Together</div></div>
+                    <div class="photo-tile fade-in hover-zoom-tile"><img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=500&h=400&fit=crop&q=80" alt="Prayer"><div class="photo-caption">Pray Together</div></div>
+                    <div class="photo-tile fade-in hover-zoom-tile"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&h=400&fit=crop&q=80" alt="Fellowship"><div class="photo-caption">Grow Together</div></div>
+                    <div class="photo-tile fade-in hover-zoom-tile"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500&h=400&fit=crop&q=80" alt="Children"><div class="photo-caption">Next Generation</div></div>
+                    <div class="photo-tile fade-in hover-zoom-tile"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=500&h=400&fit=crop&q=80" alt="Community"><div class="photo-caption">Fellowship</div></div>
+                    <div class="photo-tile fade-in hover-zoom-tile"><img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=500&h=400&fit=crop&q=80" alt="Study"><div class="photo-caption">Study Scripture</div></div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
                 </div>
             </div>
         </section>
 
-        <section class="parallax-section" style="background-image: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1600&h=800&fit=crop');">
-            <div class="parallax-overlay"></div>
-            <div class="parallax-content">
-                <h2 class="fade-in">Join Us This Sunday</h2>
-                <div class="service-times-box fade-in" style="background-color: rgba(13, 13, 15, 0.6); border-color: var(--warm-gold);">
-                    <div class="service-time-item"><svg width="32" height="32" style="color: var(--warm-gold)"><use href="#clock-icon"></use></svg><p>Sunday Service: 10:00 AM</p></div>
-                    <div class="service-time-item"><svg width="28" height="28" style="color: var(--warm-gold)"><use href="#map-pin-icon"></use></svg><p style="font-size: 18px;">815 Private Road 4717, Kempner, TX 76539</p></div>
-                </div>
-                <div style="margin-top: 32px;"><a href="visit-us.html" class="btn btn-primary" style="font-size: 20px;">Plan Your Visit</a></div>
-            </div>
-        </section>
-
-        <section class="section-light">
-            <div class="container">
-                <h2 class="section-title fade-in">What to Expect When You Visit</h2>
-                <div class="grid-2">
-                    <div class="interactive-card fade-in"><h3>Biblical Preaching</h3><p>Experience verse-by-verse teaching through books of the Bible. No gimmicks, no entertainment—just the powerful Word of God faithfully proclaimed.</p></div>
-                    <div class="interactive-card fade-in"><h3>Christ-Centered Worship</h3><p>Join us in singing hymns and worship songs that exalt Jesus and proclaim biblical truth. Worship is about God, not performance.</p></div>
-                    <div class="interactive-card fade-in"><h3>Warm Community</h3><p>Meet a family of believers committed to loving one another, serving together, and growing in faith. You'll find genuine fellowship here.</p></div>
-                    <div class="interactive-card fade-in"><h3>Come As You Are</h3><p>Whether you're new to faith or a lifelong believer, you're welcome here. Dress casually, bring your questions, and encounter Jesus.</p></div>
+        <!-- Sunday Info Section -->
+        <section class="section-dark">
+            <div class="container-medium text-center">
+                <h2 class="section-title fade-in">Join Us This Sunday</h2>
+                <div class="service-times-box fade-in">
+                    <div class="service-time-item">
+                        <p style="font-size: 28px; font-weight: 700;">Sunday Morning: 10:00 AM</p>
+                    </div>
+                    <div class="service-time-item">
+                        <p style="font-size: 20px;">815 Private Road 4717, Kempner, TX 76539</p>
+                    </div>
+                    <div style="margin-top: 32px;">
+                        <a href="visit-us.html" class="btn btn-primary" style="font-size: 18px;">Plan Your Visit</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -151,7 +179,7 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-section"><h3>Broken Barriers Church</h3><p>Restoring the Kingdom, exactly as He designed it.</p></div>
-                <div class="footer-section"><h4>Quick Links</h4><div class="footer-links"><a href="index.html" class="footer-link">Home</a><a href="about.html" class="footer-link">About</a><a href="contact.html" class="footer-link">Connect</a><a href="give.html" class="footer-link">Give</a></div></div>
+                <div class="footer-section"><h4>Quick Links</h4><div class="footer-links"><a href="index.html" class="footer-link">Home</a><a href="about.html" class="footer-link">About</a><a href="gallery.html" class="footer-link">Photo Gallery</a><a href="contact.html" class="footer-link">Connect</a><a href="give.html" class="footer-link">Give</a></div></div>
                 <div class="footer-section"><h4>Contact</h4><p>815 Private Road 4717</p><p>Kempner, TX 76539</p><p style="margin-top: 12px;">contact@brokenbarriers.church</p></div>
             </div>
             <div class="footer-bottom"><p>&copy; 2026 Broken Barriers Church. All rights reserved.</p></div>
