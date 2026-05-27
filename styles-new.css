@@ -1,93 +1,265 @@
 /* New Homepage Design Styles */
 
-/* Two-Column Hero */
-.hero-two-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 700px;
-  align-items: center;
-  gap: 60px;
-  padding: 80px 60px;
-  background-color: var(--parchment-cream);
-}
-
-.hero-content-left {
-  max-width: 600px;
-  text-align: left;
-}
-
-.brand-script {
-  font-family: 'Cinzel', serif;
-  font-size: 18px;
-  color: var(--crimson-red);
-  margin-bottom: 16px;
-  font-style: italic;
-}
-
-.hero-headline {
-  font-size: clamp(36px, 4vw, 52px);
-  line-height: 1.2;
-  margin-bottom: 24px;
-  color: var(--deep-crimson);
-}
-
-.gold-accent {
-  color: var(--rich-gold);
-  display: inline;
-}
-
-.hero-lede {
-  font-size: 20px;
-  line-height: 1.7;
-  margin-bottom: 32px;
-  color: var(--obsidian-black);
-}
-
-.hero-ctas {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.hero-verse {
-  font-size: 16px;
-  font-style: italic;
-  color: var(--crimson-red);
-  border-left: 4px solid var(--rich-gold);
-  padding-left: 20px;
-}
-
-.hero-verse span {
-  display: block;
-  margin-top: 8px;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.hero-image-right {
+/* Hero Slider */
+.hero-slider {
   position: relative;
+  width: 100%;
   height: 700px;
-  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  background-color: var(--obsidian-black);
 }
 
-.hero-image-right img {
+.slider-container {
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
-.hero-gradient-overlay {
+.slide {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to right, rgba(13, 13, 15, 0.4), transparent);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
   z-index: 1;
 }
+
+.slide-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: kenburns 20s ease infinite;
+}
+
+@keyframes kenburns {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(13, 13, 15, 0.85), rgba(13, 13, 15, 0.4));
+  z-index: 1;
+}
+
+.slide-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+  color: var(--parchment-cream);
+}
+
+.slide-label {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  color: var(--warm-gold);
+  margin-bottom: 16px;
+  font-style: italic;
+  letter-spacing: 1px;
+  animation: slideInLeft 0.8s ease;
+}
+
+.slide-title {
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: var(--parchment-cream);
+  animation: slideInLeft 0.8s ease 0.2s backwards;
+}
+
+.slide-description {
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 700px;
+  opacity: 0.95;
+  animation: slideInLeft 0.8s ease 0.4s backwards;
+}
+
+.slide-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: slideInLeft 0.8s ease 0.6s backwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slider Navigation Arrows */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 48px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.slider-arrow:hover {
+  background: rgba(201, 162, 74, 0.9);
+  border-color: var(--rich-gold);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-prev {
+  left: 30px;
+}
+
+.slider-next {
+  right: 30px;
+}
+
+/* Slider Dots */
+.slider-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.slider-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.slider-dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.2);
+}
+
+.slider-dot.active {
+  background: var(--rich-gold);
+  border-color: var(--rich-gold);
+  width: 40px;
+  border-radius: 7px;
+}
+
+/* Responsive Slider */
+@media (max-width: 1024px) {
+  .hero-slider {
+    height: 600px;
+  }
+  
+  .slide-content {
+    padding: 0 40px;
+  }
+  
+  .slider-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+  }
+  
+  .slider-prev {
+    left: 20px;
+  }
+  
+  .slider-next {
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 500px;
+  }
+  
+  .slide-content {
+    padding: 0 24px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .slide-label {
+    font-size: 14px;
+  }
+  
+  .slide-description {
+    font-size: 16px;
+  }
+  
+  .slider-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 32px;
+  }
+  
+  .slider-prev {
+    left: 12px;
+  }
+  
+  .slider-next {
+    right: 12px;
+  }
+  
+  .slider-dots {
+    bottom: 24px;
+  }
+  
+  .slider-dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .slider-dot.active {
+    width: 30px;
+  }
+}
+
+/* Old Two-Column Hero - Removed */
 
 /* Mission Two-Column */
 .mission-two-column {
@@ -436,4 +608,95 @@
   .photo-grid-preview {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==========================================
+   Fix Scroll and Hover Issues
+   ========================================== */
+
+/* Ensure body and html allow scrolling */
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Fix dropdown menus - ensure they're clickable */
+.dropdown-menu {
+  pointer-events: all;
+  z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+  pointer-events: all;
+}
+
+/* Ensure slider doesn't block scroll */
+.hero-slider {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure all buttons are clickable */
+button, .btn, a {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Fix any overlay issues */
+.slide-overlay {
+  pointer-events: none;
+}
+
+.slide-content {
+  pointer-events: auto;
+}
+
+.slide-content * {
+  pointer-events: auto;
+}
+
+/* Fix mobile menu interactions */
+.mobile-nav {
+  pointer-events: auto;
+  z-index: 9999;
+}
+
+.mobile-nav.active {
+  pointer-events: auto;
+}
+
+/* Ensure smooth scrolling on all sections */
+section {
+  position: relative;
+  z-index: auto;
+}
+
+/* Fix parallax scroll issues */
+.parallax-quote-break {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Ensure hover states work properly */
+.hover-lift:hover,
+.hover-zoom-tile:hover {
+  z-index: 10;
+}
+
+/* Fix gallery interactions */
+.photo-tile,
+.gallery-photo {
+  pointer-events: auto;
+}
+
+/* Ensure all interactive elements are above backgrounds */
+a, button, input, select, textarea {
+  position: relative;
+  z-index: 1;
 }
