@@ -123,3 +123,104 @@ document.addEventListener('DOMContentLoaded', function() {
   const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .zoom-in');
   animatedElements.forEach(el => observer.observe(el));
 });
+
+// ==========================================
+// Hero Slider Functionality
+// ==========================================
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.slider-dot');
+  const prevButton = document.querySelector('.slider-prev');
+  const nextButton = document.querySelector('.slider-next');
+  
+  if (!slides.length) return; // Exit if no slider present
+  
+  let currentSlide = 0;
+  let autoPlayInterval;
+  
+  // Show specific slide
+  function showSlide(index) {
+    // Remove active class from all slides and dots
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Add active class to current slide and dot
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+    
+    currentSlide = index;
+  }
+  
+  // Next slide
+  function nextSlide() {
+    let next = currentSlide + 1;
+    if (next >= slides.length) next = 0;
+    showSlide(next);
+  }
+  
+  // Previous slide
+  function prevSlide() {
+    let prev = currentSlide - 1;
+    if (prev < 0) prev = slides.length - 1;
+    showSlide(prev);
+  }
+  
+  // Auto-play function
+  function startAutoPlay() {
+    autoPlayInterval = setInterval(nextSlide, 6000); // Change slide every 6 seconds
+  }
+  
+  // Stop auto-play
+  function stopAutoPlay() {
+    clearInterval(autoPlayInterval);
+  }
+  
+  // Event listeners for arrows
+  if (prevButton) {
+    prevButton.addEventListener('click', function() {
+      stopAutoPlay();
+      prevSlide();
+      startAutoPlay(); // Restart auto-play after manual interaction
+    });
+  }
+  
+  if (nextButton) {
+    nextButton.addEventListener('click', function() {
+      stopAutoPlay();
+      nextSlide();
+      startAutoPlay();
+    });
+  }
+  
+  // Event listeners for dots
+  dots.forEach(function(dot, index) {
+    dot.addEventListener('click', function() {
+      stopAutoPlay();
+      showSlide(index);
+      startAutoPlay();
+    });
+  });
+  
+  // Pause on hover
+  const sliderContainer = document.querySelector('.hero-slider');
+  if (sliderContainer) {
+    sliderContainer.addEventListener('mouseenter', stopAutoPlay);
+    sliderContainer.addEventListener('mouseleave', startAutoPlay);
+  }
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') {
+      stopAutoPlay();
+      prevSlide();
+      startAutoPlay();
+    } else if (e.key === 'ArrowRight') {
+      stopAutoPlay();
+      nextSlide();
+      startAutoPlay();
+    }
+  });
+  
+  // Start auto-play
+  startAutoPlay();
+});
