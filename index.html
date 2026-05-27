@@ -39,21 +39,93 @@
     </header>
 
     <main>
-        <!-- Two-Column Hero -->
-        <section class="hero-two-column">
-            <div class="hero-content-left">
-                <p class="brand-script fade-in">Welcome to</p>
-                <h1 class="hero-headline fade-in">Breaking <span class="gold-accent">Spiritual, Emotional,</span> and Generational Barriers</h1>
-                <p class="hero-lede fade-in">Through the power of Jesus Christ, we tear down every wall standing between people and their Savior.</p>
-                <div class="hero-ctas fade-in">
-                    <a href="visit-us.html" class="btn btn-primary">Plan Your Visit</a>
-                    <a href="about.html" class="btn btn-secondary">Our Story</a>
+        <!-- Hero Slider -->
+        <section class="hero-slider">
+            <div class="slider-container">
+                <!-- Slide 1: Welcome -->
+                <div class="slide active">
+                    <div class="slide-background" style="background-image: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920&h=1080&fit=crop&q=80');"></div>
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <p class="slide-label">Welcome to</p>
+                        <h1 class="slide-title">Broken Barriers Church</h1>
+                        <p class="slide-description">Breaking spiritual, emotional, and generational barriers through the power of Jesus Christ</p>
+                        <div class="slide-ctas">
+                            <a href="visit-us.html" class="btn btn-primary">Plan Your Visit</a>
+                            <a href="about.html" class="btn btn-secondary">Our Story</a>
+                        </div>
+                    </div>
                 </div>
-                <p class="hero-verse fade-in">"For freedom Christ has set us free" <span>— Galatians 5:1</span></p>
+
+                <!-- Slide 2: Watch a Sermon -->
+                <div class="slide">
+                    <div class="slide-background" style="background-image: url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=1920&h=1080&fit=crop&q=80');"></div>
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <p class="slide-label">Latest Message</p>
+                        <h1 class="slide-title">Watch Our Sermons</h1>
+                        <p class="slide-description">Dive deep into God's Word with biblical teaching that challenges and transforms</p>
+                        <div class="slide-ctas">
+                            <a href="sermons.html" class="btn btn-primary">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Plan a Visit -->
+                <div class="slide">
+                    <div class="slide-background" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1920&h=1080&fit=crop&q=80');"></div>
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <p class="slide-label">Join Us</p>
+                        <h1 class="slide-title">Plan Your First Visit</h1>
+                        <p class="slide-description">Sunday mornings at 10:00 AM • 815 Private Road 4717, Kempner, TX</p>
+                        <div class="slide-ctas">
+                            <a href="visit-us.html" class="btn btn-primary">Get Details</a>
+                            <a href="new-here.html" class="btn btn-secondary">New Here?</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Announcements -->
+                <div class="slide">
+                    <div class="slide-background" style="background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&h=1080&fit=crop&q=80');"></div>
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <p class="slide-label">Church Announcements</p>
+                        <h1 class="slide-title">Stay Connected</h1>
+                        <p class="slide-description">Small groups starting this month • Prayer nights every Wednesday • Youth ministry kicks off June 1st</p>
+                        <div class="slide-ctas">
+                            <a href="events.html" class="btn btn-primary">View All Updates</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: Upcoming Events -->
+                <div class="slide">
+                    <div class="slide-background" style="background-image: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1920&h=1080&fit=crop&q=80');"></div>
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <p class="slide-label">Coming Soon</p>
+                        <h1 class="slide-title">Upcoming Events</h1>
+                        <p class="slide-description">Community BBQ June 15th • Vacation Bible School July 10-14 • Men's Retreat August 5-7</p>
+                        <div class="slide-ctas">
+                            <a href="events.html" class="btn btn-primary">See All Events</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="hero-image-right slide-in-right">
-                <div class="hero-gradient-overlay"></div>
-                <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1200&h=900&fit=crop&q=80" alt="Worship">
+
+            <!-- Slider Navigation -->
+            <button class="slider-arrow slider-prev" aria-label="Previous slide">‹</button>
+            <button class="slider-arrow slider-next" aria-label="Next slide">›</button>
+
+            <!-- Slider Dots -->
+            <div class="slider-dots">
+                <button class="slider-dot active" data-slide="0"></button>
+                <button class="slider-dot" data-slide="1"></button>
+                <button class="slider-dot" data-slide="2"></button>
+                <button class="slider-dot" data-slide="3"></button>
+                <button class="slider-dot" data-slide="4"></button>
             </div>
         </section>
 
